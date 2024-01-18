@@ -1,0 +1,148 @@
+/* Define the font family for the entire document */
+body {
+    font-family: 'Roboto', sans-serif;
+
+    /* Center the content both horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Set full height and remove margin */
+    height: 100vh;
+    margin: 0;
+
+    /* Create a gradient background animation */
+    background: linear-gradient(-45deg, #3498db, #2c3e50, #e74c3c, #1abc9c);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+/* Style the login container */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    border-radius: 15px;
+
+    /* Apply a glass effect with backdrop-filter */
+    backdrop-filter: blur(10px);
+
+    /* Add a shadow for a subtle lift */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+
+    /* Background with transparency for the glass effect */
+    background: rgba(255, 255, 255, 0.2);
+
+    /* Apply fadeIn animation for a smooth entrance */
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Style the heading */
+h2 {
+    text-align: center;
+    color: #ecf0f1;
+    /* Light text color for contrast */
+}
+
+/* Style the form labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ecf0f1;
+    /* Light text color for contrast */
+}
+
+/* Style the input fields */
+input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #ecf0f1;
+    /* Light border color */
+    border-radius: 8px;
+    box-sizing: border-box;
+
+    /* Semi-transparent background for a glass effect */
+    background: rgba(255, 255, 255, 0.8);
+
+    /* Smooth transition for border and background changes */
+    transition: border-color 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+/* Style the input focus state */
+input:focus {
+    border-color: #3498db;
+    /* Highlight border color on focus */
+    background: rgba(255, 255, 255, 1);
+    /* Full opacity on focus */
+}
+
+/* Style the login button */
+button {
+    background: linear-gradient(to right, #27ae60, #2ecc71);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+
+    /* Smooth transition for button scaling and background changes */
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+/* Style the button hover state */
+button:hover {
+    transform: scale(1.05);
+    /* Slight scaling on hover for depth */
+    background: linear-gradient(to right, #25a256, #2ccf77);
+    /* Gradient change on hover */
+}
+
+/* Style the error message */
+#error-message {
+    color: #fff;
+    /* Red color for error messages */
+    margin-top: 10px;
+    text-align: center;
+
+    /* Apply a shaking animation for visual emphasis */
+
+}
+
+
+/* Keyframe animation for fadeIn effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframe animation for gradient background animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Media query for responsive design on smaller screens */
+@media screen and (max-width: 600px) {
+    .login-container {
+        width: 90%;
+        max-width: none;
+    }
+}
